@@ -1,7 +1,7 @@
 ---
 title: information-security
 date: 2019-05-18 15:12:46
-tags: [information,security]
+tags:
 ---
 
 ## 概念

@@ -1,7 +1,7 @@
 ---
 title: git.clone
 date: 2019-05-18 14:19:36
-tags: [git,clone]
+tags: git
 ---
 
 ## clone的用法

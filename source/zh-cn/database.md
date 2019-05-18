@@ -1,7 +1,7 @@
 ---
 title: database
 date: 2019-05-18 15:14:14
-tags: database
+tags:
 ---
 
 ## 概念

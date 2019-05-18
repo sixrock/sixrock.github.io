@@ -1,7 +1,7 @@
 ---
 title: yarn
 date: 2019-05-18 14:37:16
-tags: [yarn,npm,node.js]
+tags:
 ---
 
 ## add
