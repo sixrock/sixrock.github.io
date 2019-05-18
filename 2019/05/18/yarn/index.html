@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>yarn | SixRock</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="add123456# 依赖包添加yarn add &amp;lt;包名&amp;gt;# 开发依赖包添加yarn # 全局安装yarn global add &amp;lt;包名&amp;gt; -v, --version                       output the version number --no-default-rc                     prevent Yarn from au">
+<meta name="keywords" content="yarn,npm,node.js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="yarn">
+<meta property="og:url" content="http://sixrock.github.io/2019/05/18/yarn/index.html">
+<meta property="og:site_name" content="SixRock">
+<meta property="og:description" content="add123456# 依赖包添加yarn add &amp;lt;包名&amp;gt;# 开发依赖包添加yarn # 全局安装yarn global add &amp;lt;包名&amp;gt; -v, --version                       output the version number --no-default-rc                     prevent Yarn from au">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:updated_time" content="2019-05-18T06:47:17.768Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="yarn">
+<meta name="twitter:description" content="add123456# 依赖包添加yarn add &amp;lt;包名&amp;gt;# 开发依赖包添加yarn # 全局安装yarn global add &amp;lt;包名&amp;gt; -v, --version                       output the version number --no-default-rc                     prevent Yarn from au">
+  
+    <link rel="alternate" href="/atom.xml" title="SixRock" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">SixRock</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">呵呵</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://sixrock.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-yarn" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/05/18/yarn/" class="article-date">
+  <time datetime="2019-05-18T06:37:16.000Z" itemprop="datePublished">2019-05-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      yarn
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="add"><a href="#add" class="headerlink" title="add"></a>add</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 依赖包添加</span></span><br><span class="line">yarn add &lt;包名&gt;</span><br><span class="line"><span class="comment"># 开发依赖包添加</span></span><br><span class="line">yarn </span><br><span class="line"><span class="comment"># 全局安装</span></span><br><span class="line">yarn global add &lt;包名&gt;</span><br></pre></td></tr></table></figure>
+<pre><code>-v, --version                       output the version number
+--no-default-rc                     prevent
+</code></pre><p>Yarn from automatically detecting yarnrc and npmrc files<br>    –use-yarnrc <path>                 specifies a yarnrc file that Yarn should use (.yarnrc only, not .npmrc) (default: )<br>    –verbose                           output verbose messages on internal operations<br>    –offline                           trigger<br>an error if any required dependencies are not available in local cache<br>    –prefer-offline                    use network only if dependencies are not available in local cache<br>    –enable-pnp, –pnp                 enable the Plug’n’Play installation<br>    –disable-pnp                       disable<br>the Plug’n’Play installation<br>    –strict-semver<br>    –json                              format Yarn log messages as lines of JSON (see jsonlines.org)<br>    –ignore-scripts                    don’t run lifecycle scripts<br>    –har                               save HAR output of network traffic<br>    –ignore-platform                   ignore platform checks<br>    –ignore-engines                    ignore engines check<br>    –ignore-optional                   ignore optional dependencies<br>    –force                             install<br>and build packages even if they were built before, overwrite lockfile<br>    –skip-integrity-check              run install without checking if node_modules is installed<br>    –check-files                       install<br>will verify file tree of packages for consistency<br>    –no-bin-links                      don’t generate bin links when setting up packages<br>    –flat                              only allow one version of a package<br>    –prod, –production [prod]<br>    –no-lockfile                       don’t read or generate a lockfile<br>    –pure-lockfile                     don’t generate a lockfile<br>    –frozen-lockfile                   don’t generate a lockfile and fail if an update is needed<br>    –update-checksums                  update package checksums from current repository<br>    –link-duplicates                   create hardlinks to the repeated modules in node_modules    –link-folder <path>                specify<br>a custom folder to store global links<br>    –global-folder <path>              specify<br>a custom folder to store global packages<br>    –modules-folder <path>             rather than installing modules into the node_modules folder relative to the cwd, output them here<br>    –preferred-cache-folder <path>     specify<br>a custom folder to store the yarn cache if possible<br>    –cache-folder <path>               specify<br>a custom folder that must be used to store the yarn cache<br>    –mutex <type>[:specifier]          use a mutex to ensure only one yarn instance is executing<br>    –emoji [bool]                      enable emoji in output (default: false)<br>    -s, –silent                        skip Yarn console logs, other types of logs (script output) will be printed<br>    –cwd <cwd>                         working<br>directory to use (default: G:\work\blog\sixrock.github.io)<br>    –proxy <host><br>    –https-proxy <host><br>    –registry <url>                    override configuration registry<br>    –no-progress                       disable<br>progress bar<br>    –network-concurrency <number>      maximum<br>number of concurrent network requests<br>    –network-timeout <milliseconds>    TCP timeout for network requests<br>    –non-interactive                   do not show interactive prompts<br>    –scripts-prepend-node-path [bool]  prepend<br>the node executable dir to the PATH in scripts<br>    –no-node-version-check             do not warn when using a potentially unsupported Node version<br>    –focus                             Focus on a single workspace by installing remote copies<br>of its sibling workspaces.<br>    –otp <otpcode>                     one-time password for two factor authentication<br>    -W, –ignore-workspace-root-check   required to run yarn add inside a workspace root<br>    -D, –dev                           save package to your <code>devDependencies</code><br>    -P, –peer                          save package to your <code>peerDependencies</code><br>    -O, –optional                      save package to your <code>optionalDependencies</code><br>    -E, –exact                         install<br>exact version<br>    -T, –tilde                         install<br>most recent release with the same minor version<br>    -A                                  –audit<br>    -h, –help                          output usage information<br>  Visit <a href="https://yarnpkg.com/en/docs/cli/add" target="_blank" rel="noopener">https://yarnpkg.com/en/docs/cli/add</a> for<br>documentation about this command.</otpcode></milliseconds></number></url></host></host></cwd></type></path></path></path></path></path></path></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://sixrock.github.io/2019/05/18/yarn/" data-id="cjvt5n4rc0004q0vmje5s6uqa" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node-js/">node.js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm/">npm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/yarn/">yarn</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/05/18/git/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">git</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/clone/">clone</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/yarn/">yarn</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/clone/" style="font-size: 10px;">clone</a> <a href="/tags/git/" style="font-size: 20px;">git</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/node-js/" style="font-size: 10px;">node.js</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/yarn/" style="font-size: 10px;">yarn</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/05/18/yarn/">yarn</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/18/git/">git</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/18/git-clone/">git.clone</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/18/javascript/">javascript</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/18/hello-world/">Hexo</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 SixRock<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
