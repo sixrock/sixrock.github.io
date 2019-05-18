@@ -8,7 +8,8 @@ subtitle: 呵呵
 description: 哈哈
 keywords: blog,博客,学习,编程
 author: SixRock
-language: zh-cn
+# language: zh-CN
+language: en
 timezone:
 
 # URL

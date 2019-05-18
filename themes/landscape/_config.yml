@@ -2,6 +2,12 @@
 menu:
   Home: /
   Archives: /archives
+  Life: /life
+  Work: /work
+lang:
+  en: /
+  zh-CN: /zh-cn
+  
 rss: /atom.xml
 
 # Content
