@@ -5,8 +5,8 @@ reward: true
 mathjax: false
 date: 2019-10-10 08:08:08
 updated:
-categories: Programming
-tags: Programming,Coding,Database,Shell,Command
+categories: Programming
+tags: Programming,Coding,Database,Shell,Command
 description:
 ---
 
