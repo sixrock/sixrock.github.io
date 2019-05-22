@@ -7,6 +7,7 @@ tags:
 ## 提交代码
 ```sh
 cd learnning
+git pull
 git add --all
 git commit -m "<本次修改说明>"
 git push
