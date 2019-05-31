@@ -5,6 +5,77 @@ tags:
 ---
 
 ## computer
-###actoin  行动    alert  警告    analing  模拟    anchor  锚    ANSI  美国国家标准协会
-###argument  内容提要、论证    ASCII  美国信息交换标准码    attribute  属性、特质    audio  声音的 音频的
-###address  地址  寻址  选址
+- actoin  行动
+- alert  警告    
+- analing  模拟
+- anchor  锚
+- ANSI  美国国家标准协会
+- argument  内容提要、论证    
+- ASCII  美国信息交换标准码 
+- attribute  属性、特质    
+- audio  声音的 音频的
+- address  地址  寻址  选址
+- modifier 修改
+- attribute 属性 特质 归属
+- backend 后端 后台 后段
+- base 基础
+- behavior 行为 举止 态度 反应
+- binary digt 二进制数字 二进制位
+- bit 位
+- bit depth 位深度 
+- bit rate 位速率
+- bitmap 位图 位映图
+- boolean 布尔数学
+- break 中断
+- browser 浏览器
+- buffer 缓冲区 缓冲器
+- build 建立
+- byte 字节
+- record 记录
+- cache 高速缓冲存储器
+- code 代码 密码 编码
+- calculating 计算的 
+- cell 细胞 电池
+- circle 圆 循环 圈子
+- captial 首都 省会
+- catch 赶上 抓住
+- container 集装箱 容器
+- component 组成的 构成的 组件 成分
+## HTML
+- DOM (document object model) 文档对象模型
+- button 按钮 扣住
+- target 目标
+- blank 空的
+- applet 小程序
+- area 地域 区域
+- article 文章 条款 物品
+- accept 接受 承担 承兑 容纳
+- align 排列
+- checked 选中的
+- check 检查
+- list 列表 清单 目录
+- height 高度 身高
+- width 宽度 广泛
+- min 分钟
+- pattern 模式 图案 样品
+- size 尺寸 大小
+- max 最大值 最大数
+- type 类型 品种 模范 样式
+- value 值 价值 价格 重要性
+- placeholder 占位符
+- readonly 只读的
+- required 必须的
+- hidden 隐藏的
+- checkBox 复选框 检验盒 检查框
+- file 文件 文档 档案夹
+- submit 主张 使服从 提交
+- reset 清零 重置
+- radio 收音机 无线电
+- image 影像
+- password 密码 口令
+- bottom 底部 末端 尽头
+- autofocus 自动聚焦
+- disabled 残疾的 失能
+- form 形式 形状 形态 外形 方式
+- label 标签
+- 
