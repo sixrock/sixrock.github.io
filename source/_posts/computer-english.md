@@ -78,4 +78,14 @@ tags:
 - disabled 残疾的 失能
 - form 形式 形状 形态 外形 方式
 - label 标签
-- 
+- legend 说明 图例
+- fieldlist 表单分组
+- link 链环 环节 联系
+- main 主要的 最大的 最重要的
+- mark 标志 符号 痕迹
+- meta 元标签
+- gauge 计量数 尺寸 容量规格
+- meter 米 仪表 公尺
+- reversed 颠倒的 相反的
+- optgroup 选项组 下拉列表项集合
+- select 选拔 挑选
