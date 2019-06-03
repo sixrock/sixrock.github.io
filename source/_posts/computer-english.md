@@ -89,3 +89,16 @@ tags:
 - reversed 颠倒的 相反的
 - optgroup 选项组 下拉列表项集合
 - select 选拔 挑选
+- commit 提交
+- param 参数
+- pre 格式化文本 前置 之前 在前
+- progress 前进 进步 进行
+- source 来源 源
+- query 询问 查询
+- strike 拆除
+- style 样式 风格 时尚
+- summary 汇总 结论 简易的 扼要的
+- cellpadding 单元格边距
+- rules 规则
+- frame 框架 结构
+- track 轨道 足迹
