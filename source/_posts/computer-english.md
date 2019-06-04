@@ -102,3 +102,7 @@ tags:
 - rules 规则
 - frame 框架 结构
 - track 轨道 足迹
+- padding 填充 填塞 填补
+- pransparent 透明 显然的 坦率的
+- repeat 重复 复制
+- attachment 附件 附着
