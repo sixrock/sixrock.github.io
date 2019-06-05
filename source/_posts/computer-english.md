@@ -106,3 +106,9 @@ tags:
 - pransparent 透明 显然的 坦率的
 - repeat 重复 复制
 - attachment 附件 附着
+- align 排列
+- spacing 字距 行距
+- decoration 装饰 装扮
+- space 空格 空域
+- pre 格式化文本
+- derection 方向

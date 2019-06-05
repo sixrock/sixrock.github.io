@@ -279,3 +279,175 @@ background-color|设置元素的背景颜色
 background-image|把图像设置背景
 background-position|设置背景图像的起始位置
 background-repeat|设置背景图像是否及如何重复
+## 文本
+### 缩进文本
+ text-indent 属性，该属性可以方便地实现文本缩进
+
+ 通过使用 text-indent 属性，所有元素的第一行都可以缩进一个给定的长度，甚至该长度可以是负值
+
+ 这个属性最常见的用途是将段落的首行缩进，下面的规则会使所有段落的首行缩进 5 em
+ ```
+ p {text-indent:5em;}
+ ```
+ 不过在为 text-indent 设置负值时要当心，如果对一个段落设置了负值，那么首行的某些文本可能会超出浏览器窗口的左边界。为了避免出现这种显示问题，建议针对负缩进再设置一个外边距或一些内边距：
+ ```
+ p {text-indent:5em; padding:5em;}
+ ```
+ **使用百分比**
+text-indent 可以使用所有长度单位，包括百分比值
+
+百分数要相对于缩进元素父元素的宽度。换句话说，如果将缩进值设置为 20%，所影响元素的第一行会缩进其父元素宽度的 20%
+
+在下例中，缩进值是父元素的 20%，即 100 个像素：
+```html
+div {width: 500px;}
+p {text-indent: 20%;}
+
+<div>
+<p>这是一个P标签</p>
+</div>
+```
+**继承**
+```html
+div#outer {width: 500px;}
+div#inner {text-indent: 10%;}
+p {width: 200px;}
+
+<div id="outer">
+<div id="inner">some text. some text. some text.
+<p>this is a paragragh.</p>
+</div>
+</div>
+```
+以上标记中的段落也会缩进 50 像素，这是因为这个段落继承了 id 为 inner 的 div 元素的缩进值
+
+### **水平对齐**
+
+text-align 是一个基本的属性，它会影响一个元素中的文本行互相之间的对齐方式。它的前 3 个值相当直接，不过第 4 个和第 5 个则略有些复杂
+
+值 left、right 和 center 会导致元素中的文本分别左对齐、右对齐和居中
+
+水平对齐的属性：justify
+
+### **字间隔**
+
+word-spacing 属性可以改变字（单词）之间的标准间隔。其默认值 normal 与设置值为 0 是一样的
+
+word-spacing 属性接受一个正长度值或负长度值。如果提供一个正长度值，那么字之间的间隔就会增加。为 word-spacing 设置一个负值，会把它拉近：
+
+p.spread {word-spacing: 30px;}
+p.tight {word-spacing: -0.5em;}
+```html
+<p class="spread">
+字与字之间的间距为50px
+</p>
+
+<p class="tight">
+字与字之间重叠半个字的长度
+</p>
+```
+### **字符转换**
+text-transform 属性处理文本的大小写
+- none(对文本不做任何改动)
+- uppercase(全大写)
+- lowercase(全小写)
+- capitalize(单词的首字母大写)
+```
+h1 {text-transfrom:uppercass}
+```
+优点：
+- 只需简单规则来修改无须改变单词的本身
+- 方便后期更改
+### **文本装饰**
+
+text-decoration 属性
+
+text-decoration 有 5 个值：
+- none
+- underline
+- overline
+- line-through
+- blink
+
+**underline** 会对元素加下划线，就像 HTML 中的 U 元素一样。
+
+**overline** 的作用恰好相反，会在文本的顶端画一个上划线。
+
+**line-through** 则在文本中间画一个贯穿线，等价于 HTML 中的 S 和 strike 元素。
+
+**blink** 会让文本闪烁。
+none 值会关闭原本应用到一个元素上的所有装饰
+```
+a {text-decoration:none}
+```
+还可以在一个规则中结合多种装饰。如果希望所有超链接既有下划线，又有上划线，则规则如下
+```
+a {text-decoration:underline overline;}
+```
+**处理空白符**
+
+white-space 属性会影响到用户代理对源文档中的空格、换行和 tab 字符的处理
+```html
+P{width-space:nomal;}
+
+<p>This     paragraph has    many
+    spaces           in it.</p>
+```
+当 white-space 属性设置为 normal 时，会合并所有的空白符，并忽略换行符
+```html
+P{width-space:pre;}
+
+<p>This     paragraph has    many
+    spaces           in it.</p>
+```
+当write-space 属性设置为 pre 时，浏览器不会合并空白符，也不会忽略换行符
+```
+P{write-space:nowrap;}
+
+<p>This     paragraph has    many
+    spaces           in it.</p>
+<p>This     paragraph has    many
+    spaces           in it.</p>
+<p>This     paragraph has    many
+    spaces           in it.</p>    
+```
+它会防止元素中的文本换行，除非使用了一个 br 元素
+```html
+p {write-space:pre-warp;}
+<p>
+dsfaf dsf af asfgrh rh tr  hfdg r grt 
+gfdg gddfg dg tr
+tgr hh   trhy uj
+ju yhtr 
+gtrrht hth  eh dsght d wgw   y gdsga a grw fgsr
+</p>
+```
+当 white-space 属性设置为 pre-wrap 时，浏览器不仅会保留空白符并保留换行符，还允许自动换行
+```
+p {write-space:pre-line;}
+<p>
+保留  换行  符
+允许自动换行
+合并  空格
+</p>
+```
+当 white-space 属性设置为 pre-line 时，浏览器会保留换行符，并允许自动换行，但是会合并空白符
+
+**总结**
+值|空白符|换行符|自动换行
+--:|:--:|:--:|:--
+pre-line|合并|保留|允许
+normal|合并|忽略|允许
+nowrap|合并|忽略|不允许
+pre|保留|保留|不允许
+pre-wrap|保留|保留|允许
+**文本方向**
+
+direction 属性影响块级元素中文本的书写方向、表中列布局的方向、内容水平填充其元素框的方向、以及两端对齐元素中最后一行的位置
+```
+div {perection:rtl}
+<div>
+发生个梵蒂冈讽德诵功梵蒂冈
+</div>
+```
+对于行内元素，只有当 unicode-bidi 属性设置为 embed 或 bidi-override 时才会应用 direction 属性
