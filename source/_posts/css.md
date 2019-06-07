@@ -451,3 +451,160 @@ div {perection:rtl}
 </div>
 ```
 对于行内元素，只有当 unicode-bidi 属性设置为 embed 或 bidi-override 时才会应用 direction 属性
+
+## CSS字体
+---
+### CSS 字体属性定义文本的字体系列、大小、加粗、风格（如斜体）和变形
+除了各种特定的字体系列外，CSS 定义了 5 种通用字体系列：
+
+- Serif 字体
+- Sans-serif 字体
+- Monospace 字体
+- Cursive 字体
+- Fantasy 字体
+
+**通用字体**
+
+如果你希望文档使用一种 sans-serif 字体，但是你并不关心是哪一种字体，以下就是一个合适的声明：
+```
+p {font-family:sans-serif;}
+```
+这样就会从 sans-serif 字体系列中选择一个字体（如 Helvetica），并将其应用到 body 元素。因为有继承，这种字体选择还将应用到 body 元素中包含的所有元素，除非有一种更特定的选择器将其覆盖
+
+**指定字体**
+
+通过 font-family 属性设置更具体的字体
+```
+h1 {font-family:georgia;}
+```
+如果用户代理上没有安装 Georgia 字体，就只能使用用户代理的默认字体来显示 h1 元素
+
+我们可以通过结合特定字体名和通用字体系列来解决这个问题：
+```
+h1 {font-family:georgia, serif;}
+```
+**字体风格**
+
+font-style 属性最常用于规定斜体文本。
+
+该属性有三个值：
+
+- normal - 文本正常显示
+- italic - 文本斜体显示
+- oblique - 文本倾斜显示
+```
+p {font-style:normal;}
+p {font-style:italic;}
+p {font-style:oblique;}
+```
+斜体（italic）是一种简单的字体风格，对每个字母的结构有一些小改动，来反映变化的外观。与此不同，倾斜（oblique）文本则是正常竖直文本的一个倾斜版本
+
+**字体变形**
+font-variant 属性可以设定小型大写字母
+
+小型大写字母不是一般的大写字母，也不是小写字母，这种字母采用不同大小的大写字母
+```
+p {font-variant:small-caps}
+```
+**字体加粗**
+
+font-weight 属性设置文本的粗细。
+
+使用 bold 关键字可以将文本设置为粗体
+
+关键字 100 ~ 900 为字体指定了 9 级加粗度。如果一个字体内置了这些加粗级别，那么这些数字就直接映射到预定义的级别，100 对应最细的字体变形，900 对应最粗的字体变形。数字 400 等价于 normal，而 700 等价于 bold
+
+**字体大小**
+
+font-size 属性设置文本的大小
+
+使用像素设置字体大小
+```
+p {font-size:100px}
+```
+使用em来设置字体大小
+```
+p {font-size:3em}
+```
+可以使用下面这个公式将像素转换为 em：pixels/16=em
+
+## **CSS链接**
+---
+链接的四种状态
+- a:link - 普通的、未被访问的链接
+- a:visited - 用户已访问的链接
+- a:hover - 鼠标指针位于链接的上方
+- a:active - 链接被点击的时刻
+
+当为链接的不同状态设置样式时，请按照以下次序规则：
+
+a:hover 必须位于 a:link 和 a:visited 之后
+a:active 必须位于 a:hover 之后
+```
+a:link {color:red}
+a:visited {color:green}
+a:hover {color:blue}
+a:active {color:yellow}
+```
+**文本修饰**
+
+text-decoration 属性大多用于去掉链接中的下划线
+```
+a:link {text-decoration:none;}
+a:visited {text-decoration:none;}
+a:hiver {text-decoration:underline;}
+a:active {text-decoration:underline;}
+```
+**背景颜色**
+
+background-color 属性规定链接的背景色
+```
+a:link {background-color:red;}
+a:visited {background-color:green;}
+a:hover {background-color:yellow;}
+a:active {background-color:red;}
+```
+## **CSS列表**
+**列表类型**
+
+要修改用于列表项的标志类型，可以使用属性 list-style-type：
+```
+ul {list-style-type:} 
+```
+值|属性|
+--:|:--
+none|无标记。
+disc|默认。标记是实心圆。
+circle|标记是空心圆。
+square|标记是实心方块。
+decimal|标记是数字。
+decimal-leading-zero|0开头的数字标记。(01, 02, 03, 等。)
+lower-roman|小写罗马数字(i, ii, iii, iv, v, 等。)
+upper-roman|大写罗马数字(I, II, III, IV, V, 等。)
+lower-alpha|小写英文字母The marker is lower-alpha (a, b, c, d, e, 等。)
+upper-alpha|大写英文字母The marker is upper-alpha (A, B, C, D, E, 等。)
+lower-greek|小写希腊字母(alpha, beta, gamma, 等。)
+lower-latin|小写拉丁字母(a, b, c, d, e, 等。)
+upper-latin|大写拉丁字母(A, B, C, D, E, 等。)
+**列表项图像**
+```
+li {list-style-image:url(picture address)}
+```
+**列表标签位置**
+- list-style-position:outside在文本外面
+- list-style-position:inside在文本里面
+```
+li {list-style-position:outside}
+```
+**简写列表样式**
+```
+li {list-style:url(picture address) square inside}
+```
+**总结**
+
+属性|描述
+--:|:--
+list-style|简写属性
+list-style-image|将图像设置为列表标志
+list-style-position|设置标签的位置
+list-style-type|设置列表项标志的类型

@@ -112,3 +112,10 @@ tags:
 - space 空格 空域
 - pre 格式化文本
 - derection 方向
+- italic 斜体的
+- variant 变体 转化
+- caps 大写字
+- normal 正常的 常规的
+- square 方的
+- decimal 小数的
+- justify 两端对齐
