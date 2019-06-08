@@ -119,3 +119,10 @@ tags:
 - square 方的
 - decimal 小数的
 - justify 两端对齐
+- border 边框 边界
+- vortical 垂直的 直立的
+- solid 实心的 实体
+- dotted 点线 点线式边框
+- dashed 虚线
+- medium 中间的 中等的
+- margin 边限 边界 边距

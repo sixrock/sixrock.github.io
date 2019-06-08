@@ -608,3 +608,286 @@ list-style|简写属性
 list-style-image|将图像设置为列表标志
 list-style-position|设置标签的位置
 list-style-type|设置列表项标志的类型
+## css表格
+---
+**表格边框**
+
+下面的例子为 table、th 以及 td 设置了蓝色边框：
+```html
+table,th,td,th {
+  border:1px solid blue;
+}
+<table>
+<tr>
+<th>Firstname</th>
+<th>Lastname</th>
+</tr>
+<tr>
+<td>Bill</td>
+<td>Gates</td>
+</tr>
+<tr>
+<td>Steven</td>
+<td>Jobs</td>
+</tr>
+```
+**折叠边框**
+
+border-collapse 属性设置是否将表格边框折叠为单一边框：
+```html
+table
+  {
+  border-collapse:collapse;
+  }
+
+table,th, td
+  {
+  border: 1px solid black;
+  }
+<table>
+<tr>
+<th>Firstname</th>
+<th>Lastname</th>
+</tr>
+<tr>
+<td>Bill</td>
+<td>Gates</td>
+</tr>
+<tr>
+<td>Steven</td>
+<td>Jobs</td>
+</tr>
+```
+**表格宽度和高度**
+
+下面的例子将表格宽度设置为 100%，同时将 th 元素的高度设置为 50px：
+```html
+table {
+  width:100%;
+  }
+
+th {
+  height:50px;
+  }
+<table>
+<tr>
+  <th>Firstname</th>
+  <th>Lastname</th>
+</tr>
+<tr>
+  <td>Bill</td>
+  <td>Gates</td>
+</tr>
+</table>
+```
+**表格文本对齐**
+
+text-align 属性设置水平对齐方式，比如左对齐、右对齐或者居中：
+```html
+td {
+  text-align:right;
+}
+<table>
+<tr>
+  <th>Firstname</th>
+  <th>Lastname</th>
+</tr>
+<tr>
+  <td>Bill</td>
+  <td>Gates</td>
+</tr>
+</table>
+```
+vertical-align 属性设置垂直对齐方式，比如顶部对齐、底部对齐或居中对齐：
+```html
+td
+  {
+  height:50px;
+  vertical-align:bottom;
+  }
+<table>
+<tr>
+  <th>Firstname</th>
+  <th>Lastname</th>
+</tr>
+<tr>
+  <td>Bill</td>
+  <td>Gates</td>
+</tr>
+</table>
+```
+**表格内边距**
+
+```html
+td {
+  padding:15px;
+   }
+<table>
+<tr>
+  <th>Firstname</th>
+  <th>Lastname</th>
+</tr>
+<tr>
+  <td>Bill</td>
+  <td>Gates</td>
+</tr>
+</table>
+```
+**表格颜色**
+以及 th 元素的文本和背景颜色：
+```html
+th {
+  background-color:green;
+  color:white;
+}
+<table>
+<tr>
+  <th>Firstname</th>
+  <th>Lastname</th>
+</tr>
+<tr>
+  <td>Bill</td>
+  <td>Gates</td>
+</tr>
+</table>
+```
+CSS table 属性
+属性|描述
+--:|:--
+border-collapse|设置是否把表格边框合并成单一边框
+border-spacing|设置分割单元格边框的距离
+caption-side|设置表格标题的位置
+table-layout|设置显示单元行和列的算法
+## CSS轮廓
+属性|描述
+--:|:--
+outline|在一个声明中设置所有轮廓属性
+outline-color|设置轮廓的颜色
+outline-style|设置轮廓的样式
+outline-width|设置轮廓的宽度
+outline属性
+```
+p{
+  outline: red dotted think;
+}
+<p>fdsf dsmn md vfew ggr kvn csd</p>
+```
+outline-style属性
+```
+p{
+  outline-style:dotted
+}
+<p>fdsf dsmn md vfew ggr kvn csd</p>
+```
+值|描述
+--:|:--
+none|默认无轮廓
+dotted|定义点状轮廓
+dashed|定义虚线轮廓
+solid|定义实现轮廓
+double|定义双线轮廓
+outline-width属性
+```
+p{
+  outline-style:dotted;
+  outline-width:5px;
+}
+<p>fdsf dsmn md vfew ggr kvn csd</p>
+```
+值|描述
+--:|:--
+thin|规定细轮廓
+medium|默认，规定中等轮廓
+thick|规定粗的轮廓
+length|允许规定轮廓粗细的值
+## CSS内边距
+单边内边距属性
+也通过使用下面四个单独的属性，分别设置上、右、下、左内边距：
+
+- padding-top
+- padding-right
+- padding-bottom
+- padding-left
+
+把段落的内边距设置为父元素 width 的 10%
+```
+p {padding:10%;}
+```
+属性|描述
+--:|:--
+padding|简写属性在一个声明中设置元素的所有内边距
+padding-top|设置元素的上内边距
+padding-bottom|设置元素的下内边距
+padding-left|设置元素的左内边距
+padding-right|设置元素的右内边距
+### **CSS边框**
+**定义多种样式**
+```
+p {
+  border-style:solid dotted dashed double;
+}
+```
+上面这条规则定义了四种边框样式：实线上边框、点线右边框、虚线下边框和一个双线左边框。
+
+**定义单边样式**
+
+给四个边框都设置样式：
+- border-top-style
+- border-bottom-style
+- border-right-style
+- border-left-style
+
+**边框宽度**
+border-width 属性为边框指定宽度
+```
+p {
+  border-width:5px;
+}
+```
+给四个边框设置宽度：
+- border-bottom-width
+- border-top-width
+- border-left-width
+- border-right-width
+
+**边框颜色**
+```
+p {
+  border-color:red;
+}
+```
+给四个边框设置颜色：
+- border-bottom-color
+- border-top-color
+- border-right-color
+- border-left-color
+---
+### **CSS外边距**
+CSS margin属性
+
+定义h1外边距为10px;
+```
+h1 {
+  margin:10px;
+}
+```
+单边外边距属性
+- margin-top
+- margin-bottom
+- margin-left
+- margin-right
+
+属性|描述
+--:|:--
+margin|简写属性，在一个声明中设置所有外边距属性
+margin-bottom|设置元素的下外边距
+margin-top|设置元素的上外边距
+margin-left|设置元素的左外边距
+margin-right|设置元素的右外边距
+
+---
+## CSS外边距合并
+
+当一个元素出现在另一个元素上面时，第一个元素的下外边距与第二个元素的上外边距会发生合并
+
+当一个元素包含在另一个元素中时（假设没有内边距或边框把外边距分隔开），它们的上和/或下外边距也会发生合并
