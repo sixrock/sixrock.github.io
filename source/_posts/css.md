@@ -891,3 +891,95 @@ margin-right|设置元素的右外边距
 当一个元素出现在另一个元素上面时，第一个元素的下外边距与第二个元素的上外边距会发生合并
 
 当一个元素包含在另一个元素中时（假设没有内边距或边框把外边距分隔开），它们的上和/或下外边距也会发生合并
+### **CSS定位**
+CSS 为定位和浮动提供了一些属性，利用这些属性，可以建立列式布局，将布局的一部分与另一部分重叠，还可以完成多年来通常需要使用多个表格才能完成的任务
+一切皆为框
+可以使用 display 属性改变生成的框的类型。这意味着，通过将 display 属性设置为 block，可以让行内元素（比如 &lt;a> 元素）表现得像块级元素一样。还可以通过把 display 设置为 none，让生成的元素根本没有框。这样的话，该框及其所有内容就不再显示，不占用文档中的空间
+CSS定位机制
+普通流、浮动和绝对定位
+
+**相对定位**
+
+如果对一个元素进行相对定位，它将出现在它所在的位置上。然后，可以通过设置垂直或水平位置，让这个元素“相对于”它的起点进行移动
+```html
+#box_relative {
+  position: relative;
+  left: 30px;
+  top: 20px;
+}
+<div id="box">相对定位</div>
+```
+元素向下移动20px;向右移动30px;
+
+**绝对定位**
+
+绝对定位使元素的位置与文档流无关，因此不占据空间
+```html
+#box_relative {
+  position: absolute;
+  left: 30px;
+  top: 20px;
+}
+<div id="box">绝对定位</div>
+```
+### **CSS对齐**
+**使用 margin 属性来水平对齐**
+
+可通过将左和右外边距设置为 "auto"，来对齐块元素
+```html
+.center {
+margin-left:auto;
+margin-right:auto;
+}
+<div class="center">对齐</div>
+```
+**使用 position 属性进行左和右对齐**
+```html
+.center {
+position：absolute;
+}
+<div class="center">对齐</div>
+```
+**使用 float 属性来进行左和右对齐**
+```html
+.center {
+float:right
+}
+<div class="center">对齐</div>
+```
+## CSS导航栏
+导航栏 = 链接列表
+导航栏基本上是一个链接列表，因此使用 &lt;ul> 和 &lt;li> 元素是非常合适的：
+```html
+ul {
+  list-style-type:none;
+}
+li {
+  display:online;
+}
+<ul>
+<li>AAA</li>
+<li>BBB</li>
+<li>CCC</li>
+</ul>
+```
+---
+### CSS图片透明
+使用属性 opacity 来设定透明度。opacity 属性能够设置的值从 0.0 到 1.0。值越小，越透明
+```html
+img {
+  opacity:0.4;
+  }
+  <img src="picture address">
+```
+### CSS尺寸
+CSS 尺寸属性允许控制元素的高度和宽度。同样，它允许增加行间距。
+属性|描述
+--:|:--
+heigh|设置元素的高度。
+line-height|设置行高。
+max-heigh|设置元素的最大高度
+max-width|设置元素的最大宽度
+min-height|设置元素的最小高度
+min-width|设置元素的最小宽度
+width|设置元素的宽度

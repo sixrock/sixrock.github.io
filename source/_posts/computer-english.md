@@ -126,3 +126,9 @@ tags:
 - dashed 虚线
 - medium 中间的 中等的
 - margin 边限 边界 边距
+- display 显示
+- relative 相对的 成比例的
+- float 浮动
+- overflow 溢出 泛滥 充满
+- dimension 方面 尺寸 维
+- menu 菜单
