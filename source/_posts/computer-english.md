@@ -133,3 +133,8 @@ tags:
 - dimension 方面 尺寸 维
 - menu 菜单
 - intro 介绍 简介
+- selector 选择器
+- toggle 双态元件 切换
+- animate 动画
+- opacity 不透明 不传导
+- slow 慢的 减速的
