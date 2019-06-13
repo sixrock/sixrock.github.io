@@ -301,3 +301,115 @@ $("button").click(function(){
   div.animate({fontSize:'3em'},"slow");
 });
 ```
+## jQuery 停止动画
+jQuery stop() 方法
+
+jQuery stop() 方法用于停止动画或效果，在它们完成之前
+
+语法：
+```
+$(selector).stop(stopAll,goToEnd);
+```
+jQuery Callback 函数
+
+当动画 100% 完成后，即调用 Callback 函数
+语法：
+```
+$("p").hide(1000,function(){
+alert("The paragraph is now hidden");
+});
+```
+jQuery - Chaining
+
+jQuery 方法链接
+```
+$("#p1").css("color","red").slideUp(2000).slideDown(2000);
+```
+## jQuery 获取
+jQuery - 获得内容和属性
+
+jQuery DOM 操作
+
+jQuery 中非常重要的部分，就是操作 DOM 的能力。
+
+jQuery 提供一系列与 DOM 相关的方法，这使访问和操作元素和属性变得很容易。
+
+提示：DOM = Document Object Model（文档对象模型）
+
+获得内容 - text()、html() 以及 val()
+
+三个简单实用的用于 DOM 操作的 jQuery 方法：
+- text() - 设置或返回所选元素的文本内容
+- html() - 设置或返回所选元素的内容（包括 HTML 标记）
+- val() - 设置或返回表单字段的值
+```
+$("#btn1").click(function(){
+  alert("Text: " + $("#test").text());
+});
+$("#btn2").click(function(){
+  alert("HTML: " + $("#test").html());
+});
+```
+下面的例子演示如何通过 jQuery val() 方法获得输入字段的值：
+```
+$("#btn1").click(function(){
+  alert("Value: " + $("#test").val());
+});
+```
+获取属性 - attr()
+jQuery attr() 方法用于获取属性值
+```
+$("button").click(function(){
+  alert($("#w3s").attr("href"));
+});
+```
+---
+jQuery - 设置内容和属性
+
+设置内容 - text()、html() 以及 val()
+
+我们将使用前一章中的三个相同的方法来设置内容：
+- text() - 设置或返回所选元素的文本内容
+- html() - 设置或返回所选元素的内容（包括 HTML 标记）
+- val() - 设置或返回表单字段的值
+```
+$("#btn1").click(function(){
+  $("#test1").text("Hello world!");
+});
+$("#btn2").click(function(){
+  $("#test2").html("<b>Hello world!</b>");
+});
+$("#btn3").click(function(){
+  $("#test3").val("Dolly Duck");
+});
+```
+设置属性 - attr()
+
+jQuery attr() 方法也用于设置/改变属性值。
+```
+$("button").click(function(){
+  $("#w3s").attr("href","http://www.w3school.com.cn/jquery");
+});
+```
+jQuery-添加元素
+
+添加新的 HTML 内容
+
+我们将学习用于添加新内容的四个 jQuery 方法：
+- append() - 在被选元素的结尾插入内容
+- prepend() - 在被选元素的开头插入内容
+- after() - 在被选元素之后插入内容
+- before() - 在被选元素之前插入内容
+
+jQuery append() 方法
+
+jQuery append() 方法在被选元素的结尾插入内容
+```
+$("p").append("Some appended text.");
+```
+jQuery prepend() 方法
+
+jQuery prepend() 方法在被选元素的开头插入内容
+```
+$("p").prepend("Some prepended text.");
+```

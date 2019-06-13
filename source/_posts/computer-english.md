@@ -138,3 +138,5 @@ tags:
 - animate 动画
 - opacity 不透明 不传导
 - slow 慢的 减速的
+- callback 回收 回呼 回叫
+- chaining 链接 连接
