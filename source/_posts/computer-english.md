@@ -140,3 +140,6 @@ tags:
 - slow 慢的 减速的
 - callback 回收 回呼 回叫
 - chaining 链接 连接
+- digital 数字的
+- logic 逻辑的 逻辑性 逻辑的
+- circuit 电路 回路 巡回
