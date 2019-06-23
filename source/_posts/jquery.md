@@ -413,3 +413,174 @@ jQuery prepend() 方法在被选元素的开头插入内容
 ```
 $("p").prepend("Some prepended text.");
 ```
+## jQuery - 删除元素
+### 删除元素/内容
+如需删除元素和内容，一般可使用以下两个 jQuery 方法：
+- remove() - 删除被选元素（及其子元素）
+- empty() - 从被选元素中删除子元素
+
+### jQuery remove() 方法
+
+jQuery remove() 方法删除被选元素及其子元素。
+
+实例
+```
+$("#div1").remove();
+```
+jQuery empty() 方法
+jQuery empty() 方法删除被选元素的子元素。
+
+实例
+```
+$("#div1").empty();
+```
+### **过滤被删除的元素**
+jQuery remove() 方法也可接受一个参数，允许您对被删元素进行过滤。
+
+该参数可以是任何 jQuery 选择器的语法。
+
+下面的例子删除 class="italic" 的所有 &lt;p> 元素：
+
+实例
+```
+$("p").remove(".italic");
+```
+----
+## jQuery CSS 类
+### jQuery 操作 CSS
+jQuery 拥有若干进行 CSS 操作的方法
+
+- addClass() - 向被选元素添加一个或多个类
+- removeClass() - 从被选元素删除一个或多个类
+- toggleClass() - 对被选元素进行添加/删除类的切换操作
+- css() - 设置或返回样式属性
+
+### jQuery addClass() 方法
+展示如何向不同的元素添加 class 属性。在添加类时，可以选取多个元素：
+
+实例
+```
+$("button").click(function(){
+  $("h1,h2,p").addClass("blue");
+  $("div").addClass("important");
+});
+```
+也可以在 addClass() 方法中规定多个类：
+
+实例
+```
+$("button").click(function(){
+  $("#div1").addClass("important blue");
+});
+```
+### jQuery removeClass() 方法
+如何在不同的元素中删除指定的 class 属性：
+
+实例
+```
+$("button").click(function(){
+  $("h1,h2,p").removeClass("blue");
+});
+```
+### jQuery toggleClass() 方法
+下面的例子将展示如何使用 jQuery toggleClass() 方法。该方法对被选元素进行添加/删除类的切换操作：
+
+实例
+```
+$("button").click(function(){
+  $("h1,h2,p").toggleClass("blue");
+});
+```
+---
+### jQuery css() 方法
+返回 CSS 属性
+
+将返回首个匹配元素的 background-color 值：
+
+实例
+```
+$("p").css("background-color");
+```
+### 设置 CSS 属性
+如需设置指定的 CSS 属性，使用如下语法：    
+
+css("propertyname","value");
+
+下面的例子将为所有匹配元素设置 background-color 值：
+
+实例
+```
+$("p").css("background-color","yellow");
+```
+### 设置多个 CSS 属性
+如需设置多个 CSS 属性，使用如下语法：    
+
+css({"propertyname":"value","propertyname":"value",...});
+
+下面的例子将为所有匹配元素设置 background-color 和 font-size：
+
+实例
+```
+$("p").css({"background-color":"yellow","font-size":"200%"});
+```
+## jQuery 尺寸
+jQuery 尺寸 方法
+
+jQuery 提供多个处理尺寸的重要方法：
+
+- width()
+- height()
+- innerWidth()
+- innerHeight()
+- outerWidth()
+- outerHeight()
+
+jQuery width() 和 height() 方法
+
+width() 方法设置或返回元素的宽度（不包括内边距、边框或外边距）。
+
+height() 方法设置或返回元素的高度（不包括内边距、边框或外边距）。
+
+下面的例子返回指定的 &lt;div> 元素的宽度和高度：
+```
+$("button").click(function(){ 
+  var txt=""; 
+  txt+="Width: " + $("#div1").width() + "</br>"; 
+  txt+="Height: " + $("#div1").height(); 
+  $("#div1").html(txt); 
+});
+```
+jQuery innerWidth() 和 innerHeight() 方法
+
+innerWidth() 方法返回元素的宽度（包括内边距）。
+
+innerHeight() 方法返回元素的高度（包括内边距）。
+
+下面的例子返回指定的 &lt;div> 元素的 inner-width/height：
+
+实例
+```
+$("button").click(function(){ 
+  var txt=""; 
+  txt+="Inner width: " + $("#div1").innerWidth() + "</br>"; 
+  txt+="Inner height: " + $("#div1").innerHeight(); 
+  $("#div1").html(txt); 
+});
+```
+jQuery outerWidth() 和 outerHeight() 方法
+
+outerWidth() 方法返回元素的宽度（包括内边距和边框）。
+
+outerHeight() 方法返回元素的高度（包括内边距和边框）。
+
+下面的例子返回指定的 <div> 元素的 outer-width/height：
+
+实例
+```
+$("button").click(function(){ 
+  var txt=""; 
+  txt+="Outer width: " + $("#div1").outerWidth() + "</br>"; 
+  txt+="Outer height: " + $("#div1").outerHeight(); 
+  $("#div1").html(txt); 
+});
+```

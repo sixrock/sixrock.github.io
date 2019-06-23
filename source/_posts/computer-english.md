@@ -143,3 +143,9 @@ tags:
 - digital 数字的
 - logic 逻辑的 逻辑性 逻辑的
 - circuit 电路 回路 巡回
+- keyboard 键盘
+- mouse 鼠标
+- empty 空的 无意义的
+- property 性质 性能
+- inner 内部的 内心的
+- outer 外部的 外面的
