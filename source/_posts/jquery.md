@@ -584,3 +584,337 @@ $("button").click(function(){
   $("#div1").html(txt); 
 });
 ```
+### jquery遍历
+jQuery 遍历，意为"移动"，用于根据其相对于其他元素的关系来"查找"（或选取）HTML 元素。以某项选择开始，并沿着这个选择移动，直到抵达您期望的元素为止。
+
+下图展示了一个家族树。通过 jQuery 遍历，您能够从被选（当前的）元素开始，轻松地在家族树中向上移动（祖先），向下移动（子孙），水平移动（同胞）。这种移动被称为对 DOM 进行遍历
+### jQuery 遍历 - 祖先
+祖先是父、祖父或曾祖父等等。
+
+通过 jQuery，您能够向上遍历 DOM 树，以查找元素的祖先。
+jQuery parent() 方法
+parent() 方法返回被选元素的直接父元素。
+
+该方法只会向上一级对 DOM 树进行遍历。
+
+下面的例子返回每个 &lt;span> 元素的的直接父元素：
+```
+$(document).ready(function(){
+  $("span").parent();
+});
+```
+jQuery parents() 方法
+parents() 方法返回被选元素的所有祖先元素，它一路向上直到文档的根元素 (&lt;html>)。
+
+下面的例子返回所有 &lt;span> 元素的所有祖先：
+
+```
+$(document).ready(function(){
+  $("span").parents();
+});
+```
+也可以使用可选参数来过滤对祖先元素的搜索。
+
+下面的例子返回所有 &lt;span> 元素的所有祖先，并且它是 &lt;ul> 元素：
+
+实例:
+```
+$(document).ready(function(){
+  $("span").parents("ul");
+});
+```
+jQuery parentsUntil() 方法
+parentsUntil() 方法返回介于两个给定元素之间的所有祖先元素。
+
+下面的例子返回介于 <span> 与 <div> 元素之间的所有祖先元素：
+
+实例:
+```
+$(document).ready(function(){
+  $("span").parentsUntil("div");
+});
+```
+### jQuery 遍历 - 后代
+后代是子、孙、曾孙等等。
+
+通过 jQuery，您能够向下遍历 DOM 树，以查找元素的后代。
+
+jQuery children() 方法
+
+children() 方法返回被选元素的所有直接子元素。
+
+该方法只会向下一级对 DOM 树进行遍历。
+
+下面的例子返回每个 <div> 元素的所有直接子元素：
+
+实例:
+```
+$(document).ready(function(){
+  $("div").children();
+});
+```
+也可以使用可选参数来过滤对子元素的搜索。
+
+下面的例子返回类名为 "1" 的所有 <p> 元素，并且它们是 <div> 的直接子元素：
+
+实例:
+```
+$(document).ready(function(){
+  $("div").children("p.1");
+});
+```
+jQuery find() 方法
+
+find() 方法返回被选元素的后代元素，一路向下直到最后一个后代。
+
+下面的例子返回属于 <div> 后代的所有 <span> 元素：
+
+实例:
+```
+$(document).ready(function(){
+  $("div").find("span");
+});
+```
+返回 &lt;div> 的所有后代：
+
+实例:
+```
+$(document).ready(function(){
+  $("div").find("*");
+});
+```
+### jQuery 遍历 - 同胞(siblings)
+
+同胞拥有相同的父元素。
+
+通过 jQuery，您能够在 DOM 树中遍历元素的同胞元素。
+jQuery siblings() 方法
+siblings() 方法返回被选元素的所有同胞元素。
+
+下面的例子返回 &lt;h2> 的所有同胞元素：
+
+实例:
+```
+$(document).ready(function(){
+  $("h2").siblings();
+});
+```
+使用可选参数来过滤对同胞元素的搜索。
+
+下面的例子返回属于 &lt;h2> 的同胞元素的所有 &lt;p> 元素：
+
+实例:
+```
+$(document).ready(function(){
+  $("h2").siblings("p");
+});
+```
+jQuery next() 方法
+
+next() 方法返回被选元素的下一个同胞元素。
+
+该方法只返回一个元素。
+
+下面的例子返回 &lt;h2> 的下一个同胞元素：
+
+实例:
+```
+$(document).ready(function(){
+  $("h2").next();
+});
+```
+jQuery nextAll() 方法
+
+nextAll() 方法返回被选元素的所有跟随的同胞元素。
+
+下面的例子返回 &lt;h2> 的所有跟随的同胞元素：
+
+实例:
+```
+$(document).ready(function(){
+  $("h2").nextAll();
+});
+```
+jQuery nextUntil() 方法
+
+nextUntil() 方法返回介于两个给定参数之间的所有跟随的同胞元素。
+
+下面的例子返回介于 &lt;h2> 与 &lt;h6> 元素之间的所有同胞元素：
+
+实例:
+```
+$(document).ready(function(){
+  $("h2").nextUntil("h6");
+});
+```
+## jQuery 遍历- 过滤
+缩小搜索元素的范围
+
+三个最基本的过滤方法是：first(), last() 和 eq()，它们允许您基于其在一组元素中的位置来选择一个特定的元素。
+
+其他过滤方法，比如 filter() 和 not() 允许您选取匹配或不匹配某项指定标准的元素。
+jQuery first() 方法
+first() 方法返回被选元素的首个元素。
+
+下面的例子选取首个 <div> 元素内部的第一个 <p> 元素：
+
+实例:
+```
+$(document).ready(function(){
+  $("div p").first();
+});
+```
+jQuery last() 方法
+last() 方法返回被选元素的最后一个元素。
+
+下面的例子选择最后一个 <div> 元素中的最后一个 <p> 元素：
+
+实例:
+```
+$(document).ready(function(){
+  $("div p").last();
+});
+```
+jQuery eq() 方法
+eq() 方法返回被选元素中带有指定索引号的元素。
+
+索引号从 0 开始，因此首个元素的索引号是 0 而不是 1。下面的例子选取第二个 <p> 元素（索引号 1）：
+
+实例:
+```
+$(document).ready(function(){
+  $("p").eq(1);
+});
+```
+jQuery filter() 方法
+
+filter() 方法允许您规定一个标准。不匹配这个标准的元素会被从集合中删除，匹配的元素会被返回。
+
+下面的例子返回带有类名 "intro" 的所有 <p> 元素：
+
+实例:
+```
+$(document).ready(function(){
+  $("p").filter(".intro");
+});
+```
+jQuery not() 方法
+
+not() 方法返回不匹配标准的所有元素。
+
+提示：not() 方法与 filter() 相反。
+
+下面的例子返回不带有类名 "intro" 的所有 <p> 元素：
+
+实例:
+```
+$(document).ready(function(){
+  $("p").not(".intro");
+});
+```
+## jQuery - AJAX 
+AJAX 是与服务器交换数据的技术，它在不重载全部页面的情况下，实现了对部分网页的更新
+
+什么是 AJAX
+
+AJAX = 异步 JavaScript 和 XML
+
+简短地说，在不重载整个网页的情况下，AJAX 通过后台加载数据，并在网页上进行显示。
+
+jQuery - AJAX load() 方法
+
+jQuery load() 方法
+
+jQuery load() 方法是简单但强大的 AJAX 方法。
+
+load() 方法从服务器加载数据，并把返回的数据放入被选元素中。
+
+语法:
+```
+$(selector).load(URL,data,callback);
+```
+- URL 参数规定您希望加载的 URL
+- data 参数规定与请求一同发送的查询字符串键/值对集合
+- callback 参数是 load() 方法完成后所执行的函数名称
+
+把文件 "demo_test.txt" 的内容加载到指定的 <div> 元素中：
+
+实例:
+```
+$("#div1").load("demo_test.txt");
+```
+把 jQuery 选择器添加到 URL 参数。
+
+下面的例子把 "demo_test.txt" 文件中 id="p1" 的元素的内容，加载到指定的 &lt;div> 元素中：
+
+实例:
+```
+$("#div1").load("demo_test.txt #p1");
+```
+jQuery - AJAX get() 和 post() 方法
+
+jQuery get() 和 post() 方法用于通过 HTTP GET 或 POST 请求从服务器请求数据
+
+HTTP 请求：GET vs. POST
+两种在客户端和服务器端进行请求-响应的常用方法是：GET 和 POST。
+
+- GET - 从指定的资源请求数据
+- POST - 向指定的资源提交要处理的数据
+
+必需的 URL 参数规定您希望请求的 URL。
+
+可选的 callback 参数是请求成功后所执行的函数名。
+
+下面的例子使用 $.get() 方法从服务器上的一个文件中取回数据：
+
+实例:
+```
+$("button").click(function(){
+  $.get("demo_test.php",function(data,status){
+    alert("数据: " + data + "\n状态: " + status);
+  });
+});
+```
+jQuery $.post() 方法
+$.post() 方法通过 HTTP POST 请求从服务器上请求数据。
+
+语法:
+```
+$.post(URL,data,callback); 
+```
+- URL 参数规定您希望请求的 URL。
+
+- data 参数规定连同请求发送的数据。
+
+- callback 参数是请求成功后所执行的函数名。
+
+下面的例子使用 $.post() 连同请求一起发送数据：
+
+实例:
+```
+$("button").click(function(){
+  $.post("demo_test_post.html",
+  {
+    name:"Donald Duck",
+    city:"Duckburg"
+  },
+  function(data,status){
+    alert("Data: " + data + "nStatus: " + status);
+  });
+});
+```
+jQuery noConflict() 方法
+
+noConflict() 方法会释放对 $ 标识符的控制，这样其他脚本就可以使用它了。
+
+当然，您仍然可以通过全名替代简写的方式来使用 jQuery：
+
+实例:
+```
+$.noConflict();
+jQuery(document).ready(function(){
+  jQuery("button").click(function(){
+    jQuery("p").text("jQuery is still working!");
+  });
+});
+```
