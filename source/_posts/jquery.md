@@ -918,3 +918,130 @@ jQuery(document).ready(function(){
   });
 });
 ```
+
+## jQuery 选择器
+请使用我们的 jQuery 选择器检测器 来演示不同的选择器。
+
+选择器|实例|选取
+--:|:--:|:--
+*|$("*")|所有元素
+#id|$("#lastname")|id="lastname" 的元素
+.class|$(".intro")|class="intro" 的所有元素
+.class,.class|$(".intro,.demo")|class 为 "intro" 或 "demo" 的所有元素
+element|$("p")|所有 &lt;p> 元素
+el1,el2,el3|$("h1,div,p")|所有 &lt;h1>、&lt;div> 和 &lt;p> 元素	 	 
+:first|$("p:first")|第一个 &lt;p> 元素
+:last|$("p:last")|最后一个 &lt;p> 元素
+:even|$("tr:even")|所有偶数 &lt;tr> 元素
+:odd|$("tr:odd")|所有奇数 &lt;tr> 元素 	 
+:first-child|$("p:first-child")|属于其父元素的第一个子元素的所有 &lt;p> 元素
+:first-of-type|$("p:first-of-type")|属于其父元素的第一个 &lt;p> 元素的所有 &lt;p> 元素
+:last-child|$("p:last-child")|属于其父元素的最后一个子元素的所有 &lt;p> 元素
+:last-of-type|$("p:last-of-type")|属于其父元素的最后一个 &lt;p> 元素的所有 &lt;p> 元素
+:nth-child(n)|$("p:nth-child(2)")|属于其父元素的第二个子元素的所有 &lt;p> 元素
+:nth-last-child(n)|$("p:nth-last-child(2)")|属于其父元素的第二个子元素的所有&lt;p> 元素，从最后一个子元素开始计数
+:nth-of-type(n)|$("p:nth-of-type(2)")|属于其父元素的第二个 &lt;p> 元素的所有 &lt;p> 元素
+:nth-last-of-type(n)|$("p:nth-last-of-type(2)")|属于其父元素的第二个 &lt;p> 元素的所有 &lt;p> 元素，从最后一个子元素开始计数
+:only-child|$("p:only-child")|属于其父元素的唯一子元素的所有 &lt;p> 元素
+:only-of-type|$("p:only-of-type")|属于其父元素的特定类型的唯一子元素的所有 &lt;p> 元素	 
+parent > child|$("div > p")|&lt;div> 元素的直接子元素的所有 &lt;p> 元素
+parent descendant|$("div p")	&lt;div> 元素的后代的所有 &lt;p> 元素
+element + next|$("div + p")|每个 &lt;div> 元素相邻的下一个 &lt;p> 元素
+element ~ siblings|$("div ~ p")|&lt;div> 元素同级的所有 &lt;p> 元素 	 
+:eq(index)|$("ul li:eq(3)")|列表中的第四个元素（index 值从 0 开始）
+:gt(no)|$("ul li:gt(3)")|列举 index 大于 3 的元素
+:lt(no)|$("ul li:lt(3)")|列举 index 小于 3 的元素
+:not(selector)|$("input:not(:empty)")|所有不为空的输入元素
+:header|$(":header")|所有标题元素 &lt;h1>, &lt;h2> ...
+:animated|$(":animated")|所有动画元素
+:focus|$(":focus")|当前具有焦点的元素
+:contains(text)|$(":contains('Hello')")|所有包含文本 "Hello" 的元素|:has(selector)|$("div:has(p)")	所有包含有 &lt;p> 元素在其内的 &lt;div> 元素
+:empty|$(":empty")|所有空元素
+:parent|$(":parent")|选择所有含有子元素或者文本的父级元素。 
+:hidden|$("p:hidden")|所有隐藏的 <p> 元素
+:visible|$("table:visible")|所有可见的表格
+:root|$(":root")|文档的根元素
+:lang(language)|$("p:lang(de)")|所有带有以 "de" 开头的 lang 属性值的 &lt;p> 元素
+[attribute]|$("[href]")|所有带有 href 属性的元素
+[attribute=value]|$("[href='default.htm']")|所有带有 href 属性且值等于 "default.htm" 的元素
+[attribute!=value]|$("[href!='default.htm']")|所有带有 href 属性且值不等于 "default.htm" 的元素
+[attribute$=value]|$("[href$='.jpg']")|所有带有 href 属性且值以 ".jpg" 结尾的元素
+[attribute|=value]|$("[title|='Tomorrow']")|所有带有 title 属性且值等于 'Tomorrow' 或者以 'Tomorrow' 后跟连接符作为开头的字符串
+[attribute^=value]|$("[title^='Tom']")|所有带有 title 属性且值以 "Tom" 开头的元素
+[attribute~=value]|$("[title~='hello']")|所有带有 title 属性且值包含单词 "hello" 的元素
+[attribute*=value]|$("[title*='hello']")|所有带有 title 属性且值包含字符串 "hello" 的元素 	 
+:input|$(":input")|所有 input 元素
+:text|$(":text")|所有带有 type="text" 的 input 元素
+:password|$(":password")|所有带有 type="password" 的 input 元素	 
+:checkbox|$(":checkbox")|所有带有 type="checkbox" 的 input 元素
+:submit|$(":submit")|所有带有 type="submit" 的 input 元素
+:reset|$(":reset")|所有带有 type="reset" 的 input 元素
+:button|$(":button")|所有带有 type="button" 的 input 元素
+:image|$(":image")|所有带有 type="image" 的 input 元素
+:file|$(":file")|所有带有 type="file" 的 input 元素
+:enabled|$(":enabled")|所有启用的 input 元素
+:disabled|$(":disabled")|所有禁用的 input 元素
+:selected|$(":selected")|所有选定的 input 元素	 	 
+:checked|$(":checked")|所有选中的 input 元素
+
+### jQuery 事件方法
+
+方法|描述
+--:|:--
+bind()|向元素添加事件处理程序
+blur()|添加/触发 blur 事件
+change()|添加/触发 change 事件
+click()|添加/触发 click 事件
+dblclick()|添加/触发 double click 事件
+delegate()|向匹配元素的当前或未来的子元素添加处理程序
+die()|在版本 1.9 中被移除。移除所有通过 live() 方法添加的事件处理程序
+error()|在版本 1.8 中被废弃。添加/触发 error 事件
+event.currentTarget|在事件冒泡阶段内的当前 DOM 元素
+event.data|包含当前执行的处理程序被绑定时传递到事件方法的可选数据
+event.delegateTarget|返回当前调用的 jQuery 事件处理程序所添加的元素
+event.isDefaultPrevented()|返回指定的 event 对象上是否调用了 event.preventDefault()
+event.isImmediatePropagationStopped()|返回指定的 event 对象上是否调用了 event.stopImmediatePropagation()
+event.isPropagationStopped()|返回指定的 event 对象上是否调用了 event.stopPropagation()
+event.namespace|返回当事件被触发时指定的命名空间
+event.pageX|返回相对于文档左边缘的鼠标位置
+event.pageY|返回相对于文档上边缘的鼠标位置
+event.preventDefault()|阻止事件的默认行为
+event.relatedTarget|返回当鼠标移动时哪个元素进入或退出
+event.result|包含由被指定事件触发的事件处理程序返回的最后一个值
+event.stopImmediatePropagation()|阻止其他事件处理程序被调用
+event.stopPropagation()|阻止事件向上冒泡到 DOM 树，阻止任何父处理程序被事件通知
+event.target|返回哪个 DOM 元素触发事件
+event.timeStamp|返回从 1970 年 1 月 1 日到事件被触发时的毫秒数
+event.type|返回哪种事件类型被触发
+event.which|返回指定事件上哪个键盘键或鼠标按钮被按下
+focus()|添加/触发 focus 事件
+focusin()|添加事件处理程序到 focusin 事件
+focusout()|添加事件处理程序到 focusout 事件
+hover()|添加两个事件处理程序到 hover 事件
+keydown()|添加/触发 keydown 事件
+keypress()|添加/触发 keypress 事件
+keyup()|添加/触发 keyup 事件
+live()|在版本 1.9 中被移除。添加一个或多个事件处理程序到当前或未来的被选元素
+load()|在版本 1.8 中被废弃。添加一个事件处理程序到 load 事件
+mousedown()|添加/触发 mousedown 事件
+mouseenter()|添加/触发 mouseenter 事件
+mouseleave()|添加/触发 mouseleave 事件
+mousemove()|添加/触发 mousemove 事件
+mouseout()|添加/触发 mouseout 事件
+mouseover()|添加/触发 mouseover 事件
+mouseup()|添加/触发 mouseup 事件
+off()|移除通过 on() 方法添加的事件处理程序
+on()|向元素添加事件处理程序
+one()|向被选元素添加一个或多个事件处理程序。该处理程序只能被每个元素触发一次
+$.proxy()|接受一个已有的函数，并返回一个带特定上下文的新的函数
+ready()|规定当 DOM 完全加载时要执行的函数
+resize()|添加/触发 resize 事件
+scroll()|添加/触发 scroll 事件
+select()|添加/触发 select 事件
+submit()|添加/触发 submit 事件
+toggle()|在版本 1.9 中被移除。添加 click 事件之间要切换的两个或多个函数
+trigger()|触发绑定到被选元素的所有事件
+triggerHandler()|触发绑定到被选元素的指定事件上的所有函数
+unbind()|从被选元素上移除添加的事件处理程序
+undelegate()|从现在或未来的被选元素上移除事件处理程序
+unload()|在版本 1.8 中被废弃。添加事件处理程序到 unload 事件
